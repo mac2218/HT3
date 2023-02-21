@@ -98,3 +98,47 @@ public class ListaSimplementeEncadenada<T> extends Lista<T> {
         }
     }
     
+    public T eliminarInicio() {
+        if (estaVacia()) {
+            return null;
+        }
+        T elemento = inicio.elemento;
+        if (inicio == fin) {
+            inicio = null;
+            fin = null;
+        } else {
+            inicio = inicio.siguiente;
+        }
+        return elemento;
+    }
+
+    public T eliminarFinal() {
+        if (estaVacia()) {
+            return null;
+        }
+        T elemento = fin.elemento;
+        if (inicio == fin) {
+            inicio = null;
+            fin = null;
+        } else {
+            Nodo<T> actual = inicio;
+            while (actual.siguiente != fin) {
+                actual = actual.siguiente;
+            }
+            fin = actual;
+            fin.siguiente = null;
+        }
+        return elemento;
+    }
+
+    public T obtenerInicio() {
+        if (estaVacia()) {
+            return null;
+        }
+        return inicio.elemento;
+    }
+
+    public T obtenerFinal()}
+       
+
+    
